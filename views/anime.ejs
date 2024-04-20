@@ -1,0 +1,17 @@
+<%- include("partials/header.ejs") %>
+
+      <div class="container">
+        
+      <div class="anime-card">
+        <div class="anime-image">
+          <img src="<%= anime.image %>" alt="anime" />
+        </div>
+        <div class="content">
+            <a href="/episode/<%= anime.episodes[0][1] %>">
+                <h2><%= anime.name %></h2>
+            </a>
+          <p><%= anime.plot_summary %></p>
+        </div>
+      </div>
+</body>
+</html>

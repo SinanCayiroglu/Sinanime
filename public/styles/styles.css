@@ -1,0 +1,46 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    min-height: 100vh;
+}
+header{
+    line-height: 100px;
+    height: 100px;
+    width: 100%;
+    z-index: 5;
+    background-color: #1b1b1b;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    a{text-decoration: none;}
+}
+.menu-list a{
+    font-size: 1.7rem;
+    border-radius: .5rem;
+    padding: .5rem 1.5rem;
+    color: white;
+}
+.menu-list a:hover,
+.menu-list a.active{
+    background-color: red;
+}
+.logo{
+    margin-left: 10px;
+    font-size: 1.7rem;
+    a{color: red;}
+}
+.search-bar {color: white;}
+.search-bar input{
+    padding: 10px;
+    border-radius: 5px;
+    margin-right: 10px;
+}
+.episode{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

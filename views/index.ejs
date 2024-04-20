@@ -1,0 +1,25 @@
+<%- include("partials/header.ejs") %>
+    <div class="container">
+        <% if(locals.data&&locals.data.length>0){ %> <% data.forEach(anime =>{%>
+      <div class="anime-card">
+        <div class="anime-image">
+          <a href="anime/<%= anime.title.romaji %>"><img src="<%= anime.coverImage.large %>" alt="anime" /></a>
+        </div>
+        <div class="content">
+          <h2><%= anime.title.english %></h2>
+        </div>
+        <% }); %>
+      </div>
+      <% }else if(locals.search&&locals.search.length>0){ %> 
+      <%search.forEach(anime =>{%>
+        <div class="anime-card">
+      <div class="anime-image">
+        <img src="<%= anime.img %>" alt="anime" />
+      </div>
+      <div class="content">
+        <h2><%= anime.title %></h2>
+        <% })} %>
+      </div>
+    </div>
+  </body>
+</html>
