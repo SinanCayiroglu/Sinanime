@@ -3,21 +3,18 @@
     margin: 0;
     box-sizing: border-box;
 }
-body{
-    min-height: 100vh;
-}
-header{
-    line-height: 100px;
+.navbar{
     height: 100px;
+    line-height: 100px;
     width: 100%;
     z-index: 5;
     background-color: #1b1b1b;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    position: fixed;
     a{text-decoration: none;}
 }
+
 .menu-list a{
     font-size: 1.7rem;
     border-radius: .5rem;
@@ -39,8 +36,22 @@ header{
     border-radius: 5px;
     margin-right: 10px;
 }
+.container{
+    display: grid;
+    grid-template-columns: repeat(auto-fill,minmax(300px,1fr));
+    gap: 20px;
+    padding-top: 20px;
+    padding-left: 20px;
+}
+.watch{
+    display: flex;
+}
 .episode{
     display: flex;
     justify-content: center;
     align-items: center;
+    min-height: 100vh;
+}
+.episodes{
+    display: flex;
 }

@@ -6,7 +6,6 @@ const app = express()
 app.use(express.urlencoded({extended:true}))
 app.use(express.static("public"))
 
-
 app.get("/",async(req,res)=>{
     const response = await axios.get("https://api.cloudyflare.workers.dev/home")
     const result = response.data.results.anilistTrending
@@ -28,7 +27,6 @@ app.get("/anime/:id",async(req,res)=>{
     const id = req.params.id
     const response = await axios.get("https://api.cloudyflare.workers.dev/anime/"+id)
     const result = response.data.results
-    console.log(result)
     res.render("anime.ejs",{anime:result,id:id})
 })
 
@@ -36,8 +34,9 @@ app.get("/episode/:id",async(req,res)=>{
     const id = req.params.id
     const response = await axios.get("https://api.cloudyflare.workers.dev/episode/"+id)
     const result = response.data.results
-    console.log(result)
-    res.render("episode.ejs",{episode:result,id:id})
+    const response2 = await axios.get("https://api.cloudyflare.workers.dev/anime/"+id)
+    const result2 = response2.data.results
+    res.render("episode.ejs",{episode:result,anime:result2,id:id})
 })
 
 app.listen(3000,()=>{

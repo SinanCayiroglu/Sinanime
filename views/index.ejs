@@ -8,8 +8,9 @@
         <div class="content">
           <h2><%= anime.title.english %></h2>
         </div>
+    </div>
+
         <% }); %>
-      </div>
       <% }else if(locals.search&&locals.search.length>0){ %> 
       <%search.forEach(anime =>{%>
         <div class="anime-card">
@@ -18,8 +19,9 @@
       </div>
       <div class="content">
         <h2><%= anime.title %></h2>
-        <% })} %>
-      </div>
     </div>
+</div>
+        <% })} %>
+      
   </body>
 </html>

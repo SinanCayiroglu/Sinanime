@@ -1,4 +1,14 @@
 <%- include("partials/header.ejs") %>
+<div class="episodes">
+    <ul>
+        <% if (anime && anime.episodes && anime.episodes.length > 0) { %>
+            <% anime.episodes.forEach(episode => { %>
+                <li><a href="<%= episode[1] %>">Episode <%= episode[0] %></a></li>
+            <% }); %>
+        <% } else { %>
+            <li>No other episodes found</li>
+        <% } %>
+</div>
 <div class="episode">
     <iframe height="500px" width="500px" src="<%= episode.stream.Referer %>" frameborder="0"></iframe>
 </div>
