@@ -1,0 +1,13 @@
+<%- include("partials/header.ejs") %>
+<div class="container">
+    <% if(locals.data&&locals.data.length>0){ %> <% data.forEach(anime =>{%>
+  <div class="anime-card">
+    <div class="anime-image">
+      <a href="anime/<%= anime.title %>"><img src="<%= anime.image %>" alt="anime" /></a>
+    </div>
+    <div class="content">
+      <h3><%= anime.title %></h3>
+    </div>
+</div>
+
+    <% })}; %>

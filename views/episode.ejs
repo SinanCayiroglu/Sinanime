@@ -1,4 +1,5 @@
 <%- include("partials/header.ejs") %>
+<div class="episode-container">
 <div class="episodes">
     <ul>
         <% if (anime && anime.episodes && anime.episodes.length > 0) { %>
@@ -10,5 +11,6 @@
         <% } %>
 </div>
 <div class="episode">
-    <iframe height="500px" width="500px" src="<%= episode.stream.Referer %>" frameborder="0"></iframe>
+    <iframe height="500px" width="500px" src="<%= episode.stream.Referer %>" allow="fullscreen" frameborder="0"></iframe>
+</div>
 </div>

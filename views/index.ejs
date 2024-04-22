@@ -6,16 +6,17 @@
           <a href="anime/<%= anime.title.romaji %>"><img src="<%= anime.coverImage.large %>" alt="anime" /></a>
         </div>
         <div class="content">
-          <h2><%= anime.title.english %></h2>
+          <h3><%= anime.title.english %></h3>
         </div>
     </div>
 
         <% }); %>
+        
       <% }else if(locals.search&&locals.search.length>0){ %> 
       <%search.forEach(anime =>{%>
         <div class="anime-card">
       <div class="anime-image">
-        <img src="<%= anime.img %>" alt="anime" />
+        <a href="anime/<%= anime.id %>"><img src="<%= anime.img %>" alt="anime" /></a>
       </div>
       <div class="content">
         <h2><%= anime.title %></h2>
